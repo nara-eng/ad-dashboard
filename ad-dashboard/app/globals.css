@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-gray-50 text-gray-900; }
+}
+
+@layer utilities {
+  .cell-hover { @apply hover:bg-gray-50 hover:border-gray-300; }
+  .btn { @apply px-3 py-1.5 rounded-md border text-sm font-medium transition-colors; }
+  .btn-primary { @apply bg-brand text-white border-brand hover:bg-brand-dark; }
+  .btn-ghost { @apply bg-white text-gray-700 border-gray-300 hover:bg-gray-50; }
+}
+
+/* 날짜 입력 셀 */
+.milestone-cell input:focus { outline: none; }
+.milestone-cell.active { box-shadow: 0 0 0 2px rgba(55,138,221,0.2); }
+
+/* 스크롤바 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
